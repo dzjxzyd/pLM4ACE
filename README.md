@@ -26,8 +26,14 @@ gunicorn # for web server
 More detailed python libraries used in this project are referred to requirements.txt. All the implementation can be down in Google Colab and all you need is just a browser and a google account. Install all the above packages by !pip install package_name==2.0.0
 
 ## Usage
+CleanLab (https://github.com/cleanlab/cleanlab) implementation is in the ESM embeddings folder. 
 Notice: all my dataset use 0 and 1 to represent positive and negative, respectively. Again, 0 is positive and 1 is negative.
+
+## Repository explanations
+Each folder contained the corresponding peptide embeddings and the ipynb format implemented at Google Colab (including the 10 fold corss validaiton and the best hyparameters for final model development).
+The original dataset and the cleaned dataset are in dataset folder.
 
 ## embedding approach references
 ESM-2 https://github.com/facebookresearch/esm
+
 iFeatureOmega https://github.com/Superzchen/iFeatureOmega-CLI
