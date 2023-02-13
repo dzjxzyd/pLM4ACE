@@ -31,7 +31,7 @@ Notice: all my dataset use 0 and 1 to represent positive and negative, respectiv
 
 ## Repository explanations
 Each folder contained the corresponding peptide embeddings and the ipynb format implemented at Google Colab (including the 10 fold corss validaiton and the best hyparameters for final model development).
-The original dataset and the cleaned dataset are in dataset folder.
+The original dataset and the cleaned dataset are Orignal dataset and Cleaned dataset.xlsx.
 
 ## embedding approach references
 ESM-2 https://github.com/facebookresearch/esm
