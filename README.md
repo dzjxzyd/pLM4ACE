@@ -1,4 +1,5 @@
-# The implementation of the paper pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity
+# pLM4ACE
+The implementation of the paper pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity
 
 ## Requirements
 The majoy dependencies used in this project are as following:
