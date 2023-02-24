@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+      <head>
+        <meta charset="utf-8">
+        <title>UniDL4BioPep</title>
+        <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family==Rancho&effect=shadow-multiple' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<style>
+			.content {
+			  max-width: 1000px;
+			  margin: auto;
+			}
+
+			</style>
+    </head>
+
+<body>
+    <div class="content">
+        <h1>UniDL4BioPep: A universal deep learning architecture for bioactive peptide prediction</h1>
+        <p style="font-size:70%">The webserver is the implementation of the paper "UniDL4BioPep: UniDL4BioPep: A universal deep learning architecture for binary classification in peptide bioactivity"</p>
+	<p style="font-size:80%">Quick output version: 1. Choose a model  → 2. Input a peptide sequence</p>
+        <form action="{{url_for('predict')}}" method="post">
+            <label for="Model selection">Choose a model:</label>
+            <select name="Model selection" id="model1" required="required">
+                <option value="1">Logistic_Regression</option>
+                <option value="2">SVM</option>
+                <option value="3">Multilayer_Perceptron</option>
+
+            </select>
+{#            <input type="text" name="Model selection" placeholder="input model index, example:1" required="required">#}
+            <input type="text" name="Peptide_sequences" placeholder="peptide sequence input, example: ASD,QWE,APE" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Run</button>
+        </form>
+        <p style="color:cyan"> {{ prediction_text }} </p>
+        <br/>
+        <br/>
+        <p style="font-size:80%">Large-scale output version: 1. Prepare your files (xls, xlsx, fasta, or txt) and click “Choose File” for uploading → 2. Choose a model for classification  → 3. Download the results. </p>
+        <form action="{{url_for('pred_with_file')}}" method="post" enctype = "multipart/form-data">
+            <label for="Model_selection">Choose a model:</label>
+            <select name="Model_selection" id="model2" required="required">
+                <option value="1">Logistic_Regression</option>
+                <option value="2">SVM</option>
+                <option value="3">Multilayer_Perceptron</option>
+            </select>
+        <br>
+            <label for="Peptide_sequences">Choose a file to upload</label>
+            <input type="file" name="Peptide_sequences" id="Peptide_sequences" accept=".xls,.xlsx,.txt,.fasta"/>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Run</button>
+        </form>
+        <h4>Usage of the webserver:</h4>
+        <p style="font-size:80%"> Example for “Quick output version” : </p>
+        <p style="font-size:70%">1. Select “Antihypertensive” model for antihypertensive activity prediction.   →   →  →  2. Insert a peptide or protein sequence, “VPP” →   →  →  3. Click “Run”→   →  → 4. The result will be returned in seconds below the “Run” button</p>
+        <p style="font-size:70%">Notice: it also support multiple sequence at the same time. Just input as “VPP,IPP,CCL,AGR” (sequences are separated by comma, no space)</p>
+        <p style="font-size:80%"> Example for “Large-scale output version:” : </p>
+        <p style="font-size:70%">1. Prepare your xls, xlsx, txt or fasta files  →  →  → 2. Upload the file through “Choose File” botton  →   →  → 3. Click “Run” →   →  → 4. It will automatically download your results. </p>
+        <p style="font-size:70%">Notice: File preparation should follow the examples under this repository https://github.com/dzjxzyd/UniDL4BioPep_webserver/tree/main/Example%20uploading%20files </p>
+
+        <img src="static/css/Whole architecture.png" alt="Whole architecture" width="950" height="650" style="float:left">
+    </div>
+</body>
+</html>

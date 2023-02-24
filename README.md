@@ -1,39 +1,31 @@
-# pLM4ACE
+# LM4ACE_webserver
 
-## The implementation of the paper pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity
-Web server site: [https://sqzujiduce.us-east-1.awsapprunner.com]
+Logistic Regression (LR) model performance in test dataset
 
-The original scripts for webserver development are available at [https://github.com/dzjxzyd/LM4ACE_webserver]
+Sn_collecton 0.9054054054054054
 
-#### Notice: pLM4ACE ONLY freely available for academic research; for commercial usage, please contact us
+Sp_collecton 0.8769230769230769
 
-If the contents are useful to you, Please kindly Star it and Cite it. Please cite: pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity
+MCC_collection 0.7656758452182151
 
+BACC 0.8911642411642411
 
+Multilayer perceptrons (MLP) model performance in test dataset
 
-## Requirements
-The majoy dependencies used in this project are as following:
-```
-Flask==2.1.0  # for web server 
-pandas==1.3.5
-numpy==1.21.6
-fair-esm==2.0.0
-scikit-learn===1.0.2
-torch==1.12.0+cpu
-pickle==4.0  # for web server 
-gunicorn # for web server 
-```
-More detailed python libraries used in this project are referred to requirements.txt. All the implementation can be down in Google Colab and all you need is just a browser and a google account. Install all the above packages by !pip install package_name==2.0.0
+Sn_collecton 0.8571428571428571
 
-## Usage
-CleanLab (https://github.com/cleanlab/cleanlab) implementation is in the ESM embeddings folder. 
-Notice: all my dataset use 0 and 1 to represent positive and negative, respectively. Again, 0 is positive and 1 is negative.
+Sp_collecton 0.8818897637795275
 
-## Repository explanations
-Each folder contained the corresponding peptide embeddings and the ipynb format implemented at Google Colab (including the 10 fold corss validaiton and the best hyparameters for final model development).
-The original dataset and the cleaned dataset are Orignal dataset and Cleaned dataset.xlsx.
+MCC_collection 0.7321764677633454
 
-## embedding approach references
-ESM-2 https://github.com/facebookresearch/esm
+BACC 0.8695163104611923
 
-iFeatureOmega https://github.com/Superzchen/iFeatureOmega-CLI
+Support vector machine (SVM) model performance in test dataset
+
+Sn_collecton 0.8461538461538461
+
+Sp_collecton 0.8809523809523809
+
+MCC_collection 0.7221632314801458
+
+BACC 0.8635531135531136
