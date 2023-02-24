@@ -3,7 +3,7 @@
 
       <head>
         <meta charset="utf-8">
-        <title>UniDL4BioPep</title>
+        <title>pLM4ACE</title>
         <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family==Rancho&effect=shadow-multiple' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
@@ -21,8 +21,8 @@
 
 <body>
     <div class="content">
-        <h1>UniDL4BioPep: A universal deep learning architecture for bioactive peptide prediction</h1>
-        <p style="font-size:70%">The webserver is the implementation of the paper "UniDL4BioPep: UniDL4BioPep: A universal deep learning architecture for binary classification in peptide bioactivity"</p>
+        <h1>pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity</h1>
+        <p style="font-size:70%">The webserver is the implementation of the paper "pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity"</p>
 	<p style="font-size:80%">Quick output version: 1. Choose a model  → 2. Input a peptide sequence</p>
         <form action="{{url_for('predict')}}" method="post">
             <label for="Model selection">Choose a model:</label>
@@ -54,13 +54,13 @@
         </form>
         <h4>Usage of the webserver:</h4>
         <p style="font-size:80%"> Example for “Quick output version” : </p>
-        <p style="font-size:70%">1. Select “Antihypertensive” model for antihypertensive activity prediction.   →   →  →  2. Insert a peptide or protein sequence, “VPP” →   →  →  3. Click “Run”→   →  → 4. The result will be returned in seconds below the “Run” button</p>
+        <p style="font-size:70%">1. Select Logistic_Regression model for antihypertensive activity prediction.   →   →  →  2. Insert a peptide or protein sequence, “VPP” →   →  →  3. Click “Run”→   →  → 4. The result will be returned in seconds below the “Run” button</p>
         <p style="font-size:70%">Notice: it also support multiple sequence at the same time. Just input as “VPP,IPP,CCL,AGR” (sequences are separated by comma, no space)</p>
         <p style="font-size:80%"> Example for “Large-scale output version:” : </p>
         <p style="font-size:70%">1. Prepare your xls, xlsx, txt or fasta files  →  →  → 2. Upload the file through “Choose File” botton  →   →  → 3. Click “Run” →   →  → 4. It will automatically download your results. </p>
         <p style="font-size:70%">Notice: File preparation should follow the examples under this repository https://github.com/dzjxzyd/UniDL4BioPep_webserver/tree/main/Example%20uploading%20files </p>
 
-        <img src="static/css/Whole architecture.png" alt="Whole architecture" width="950" height="650" style="float:left">
+        <img src="static/css/Whole architecture.png" alt="Whole architecture" width="1000" height="400" style="float:left">
     </div>
 </body>
 </html>
