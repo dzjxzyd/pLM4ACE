@@ -6,6 +6,7 @@ The majoy dependencies used in this project are as following:
 ```
 Python 3.8.16
 fair-esm 2.0.0
+cleanlab
 pandas 1.3.5
 numpy 1.21.6
 scikit-learn 1.0.2
