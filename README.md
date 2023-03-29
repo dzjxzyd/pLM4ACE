@@ -1,6 +1,7 @@
 # pLM4ACE
 The implementation of the paper pLM4ACE: A protein language model-based deep learning predictor for screening peptide with high antihypertensive activity
 
+Web server is available at https://sqzujiduce.us-east-1.awsapprunner.com
 ## Requirements
 The majoy dependencies used in this project are as following:
 ```
