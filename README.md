@@ -1,5 +1,5 @@
 # pLM4ACE
-The implementation of the paper [pLM4ACE: A protein language model based predictor for antihypertensive peptide screening](https://www.sciencedirect.com/science/article/abs/pii/S0308814623017806)
+The implementation of the paper [Du, Z., Ding, X., Hsu, W., Munir, A., Xu, Y., & Li, Y. (2023). pLM4ACE: A protein language model based predictor for antihypertensive peptide screening. Food Chemistry, 137162.](https://www.sciencedirect.com/science/article/abs/pii/S0308814623017806)
 
 Web server is available at https://sqzujiduce.us-east-1.awsapprunner.com
 ## Requirements
